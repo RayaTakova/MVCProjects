@@ -8,13 +8,14 @@ namespace MVCGarden.Views
 {
     public class Display
     {
-        public Display(decimal vegitablesPrice, decimal fruitsPrice, int vegitablesKg, int fruitsKg, decimal total)
+        public Display()
         {
-            this.VegitablesPrice = vegitablesPrice;
-            this.FruitsPrice = fruitsPrice;
-            this.VegitablesKg = vegitablesKg;
-            this.FruitsKg = fruitsKg;
-            this.Total = total;
+            this.VegitablesPrice = 0;
+            this.FruitsPrice = 0;
+            this.VegitablesKg = 0;
+            this.FruitsKg = 0;
+            this.Total = 0;
+            this.GetValues();
         }
 
         public decimal VegitablesPrice { get; set; }
@@ -33,7 +34,7 @@ namespace MVCGarden.Views
 
         public void ShowResult()
         {
-            Console.WriteLine(Total);
+            Console.WriteLine(this.Total);
         }
     }
 }
